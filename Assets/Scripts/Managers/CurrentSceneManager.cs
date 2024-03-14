@@ -8,6 +8,7 @@ public class CurrentSceneManager : MonoBehaviour
     [Header("Listen to events")]
     public StringEventChannel onLevelEnded;
     public BoolEventChannel onDebugConsoleOpenEvent;
+    public VectorEventChannel onRestartLastCheckpoint;
 
     private void Start()
     {
@@ -86,6 +87,9 @@ public class CurrentSceneManager : MonoBehaviour
     public void RestartLastCheckpoint()
     {
         Debug.Log("RestartLastCheckpoint");
+        RestartLevel();
+        //onRestartLastCheckpoint.Raise();
+        //Lister dans un tableau les éléments pris, s'ils ont été pris alors ils sont supprimés et comptabilisés dans le score.
         // Refill life to full
         // Position to last checkpoint
         // Remove menu
