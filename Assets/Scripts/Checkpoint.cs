@@ -16,6 +16,7 @@ public class Checkpoint : MonoBehaviour
                 bc2d.enabled = false;
                 currentLastCheckpoint.CurrentValue = transform.position;
                 animator.SetTrigger("PlayerHitsCheckpoint");
+                Debug.Log("Checkpoint reached!");
             }
         }
     }
