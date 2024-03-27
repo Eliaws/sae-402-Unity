@@ -1,4 +1,8 @@
+### Rappel avant de push : 
 
+Toujours git pull avant de git add ou git commit !!!!!
+
+Git push dans sa branche et pas besoin de merge on fera des pull request dès qu'un ajout ne possède plus de problème.
 #### Pour utiliser repository git en local : 
 
 git clone [Nom du dépôt git];
@@ -35,6 +39,3 @@ git commit -m "Description du commit";
 #### Pour faire un push du repository local en ligne  : 
 
 git push origin [nom de la branche] ";
-
-
-test
