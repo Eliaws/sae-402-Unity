@@ -8,6 +8,9 @@ public class PlayerHealth : MonoBehaviour
 
     public PlayerInvulnerable playerInvulnerable;
 
+    public int maxHealth = 100;
+    public int currentHealth;
+
     [Tooltip("Please uncheck it on production")]
     public bool needResetHP = true;
 
@@ -19,6 +22,13 @@ public class PlayerHealth : MonoBehaviour
 
     [Header("Broadcast event channels")]
     public VoidEventChannel onPlayerDeath;
+
+    void Start()
+    {
+        currentHealth = maxHealth;
+    }
+
+   
 
     private void Awake()
     {
