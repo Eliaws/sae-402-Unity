@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class EndLevel : MonoBehaviour
 {
@@ -12,6 +14,11 @@ public class EndLevel : MonoBehaviour
 
     private bool hasBeenTriggered = false;
 
+    public class ExampleClass : MonoBehaviour
+    {
+        
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player") && !hasBeenTriggered)
@@ -21,10 +28,12 @@ public class EndLevel : MonoBehaviour
             {
                 particles.Play();
                 sfxAudioChannel.Raise(audioClip, transform.position);
-                onLevelEnded.Raise(nextLevelName);
+                SceneManager.LoadScene(nextLevelName);
             } else {
                 Debug.LogError("Level missing");
             }
         }
     }
+
+   
 }
