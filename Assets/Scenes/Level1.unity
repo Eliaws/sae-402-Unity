@@ -8101,6 +8101,11 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!1 &526643333 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7971070075530809329, guid: 8db79908228cc473583250501a06dd91, type: 3}
+  m_PrefabInstance: {fileID: 1403012751}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &531240280 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4635978963782030882, guid: 7a61305c4ee62b943838072feaa015a2, type: 3}
@@ -56039,6 +56044,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3003693635466913416, guid: 8db79908228cc473583250501a06dd91, type: 3}
+      propertyPath: playerData
+      value: 
+      objectReference: {fileID: 11400000, guid: 010bae421bcf24568aee2984b7362e82, type: 2}
+    - target: {fileID: 5202927215662521246, guid: 8db79908228cc473583250501a06dd91, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 592500370}
+    - target: {fileID: 5202927215662521246, guid: 8db79908228cc473583250501a06dd91, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartLevel
+      objectReference: {fileID: 0}
     - target: {fileID: 5374188380969112886, guid: 8db79908228cc473583250501a06dd91, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -56122,6 +56139,14 @@ PrefabInstance:
     - target: {fileID: 7971070075530809329, guid: 8db79908228cc473583250501a06dd91, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8146853577788699055, guid: 8db79908228cc473583250501a06dd91, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 592500370}
+    - target: {fileID: 8146853577788699055, guid: 8db79908228cc473583250501a06dd91, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitGame
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -61389,7 +61414,6 @@ GameObject:
   - component: {fileID: 1805798965}
   - component: {fileID: 1805798964}
   - component: {fileID: 1805798963}
-  - component: {fileID: 1805798962}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -61397,20 +61421,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1805798962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1805798961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccfabb5d69cce7b4d9615a313d66b6be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerData: {fileID: 11400000, guid: 128a5caa38b25da4b8d554b3e6931d20, type: 2}
-  spriteLibrary: {fileID: 1805798964}
 --- !u!114 &1805798963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61579,14 +61589,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5162fd71fcfc2374f96fae097d8cf5ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameOverMenu: {fileID: 0}
+  GameOverMenu: {fileID: 526643333}
   animator: {fileID: 1805798974}
   sr: {fileID: 1805798975}
   playerInvulnerable: {fileID: 1805798967}
   maxHealth: 100
   currentHealth: 0
   needResetHP: 1
-  playerData: {fileID: 11400000, guid: 128a5caa38b25da4b8d554b3e6931d20, type: 2}
+  playerData: {fileID: 11400000, guid: 010bae421bcf24568aee2984b7362e82, type: 2}
   onDebugDeathEvent: {fileID: 11400000, guid: 68cc81557b33a794c96545249fb9ff04, type: 2}
   onPlayerDeath: {fileID: 11400000, guid: e0b8ec73eeeaa0b47ab72ed51288e42c, type: 2}
 --- !u!61 &1805798972
