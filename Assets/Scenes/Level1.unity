@@ -30267,7 +30267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentSpawnPosition: {x: 0, y: 0, z: 0}
   initialSpawnPosition: {x: 0, y: 0, z: 0}
-  lastCheckpoint: {fileID: 11400000, guid: dba544cbfb081b041b958d90a6221583, type: 2}
+  lastCheckpoint: {fileID: 0}
 --- !u!114 &814072441
 MonoBehaviour:
   m_ObjectHideFlags: 0
