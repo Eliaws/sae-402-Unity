@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
+    public GameObject GameOverMenu;
     public Animator animator;
 
     public SpriteRenderer sr;
@@ -64,6 +65,25 @@ public class PlayerHealth : MonoBehaviour
         GetComponent<Rigidbody2D>().simulated = false;
         transform.Rotate(0f, 0f, 45f);
         animator.SetTrigger("Death");
+
+        //bloquer les mouvements du personnage  
+       PlayerMovement playerMovement = GetComponent<PlayerMovement>();
+            if(playerMovement != null)
+            {
+                playerMovement.enabled = false;
+            }
+
+        //empêcher les interaction physique avec les autres éléments de la scène
+        BoxCollider2D playerCollider = GetComponent<BoxCollider2D>();
+            if(playerCollider != null)
+            {
+                playerCollider.enabled = false;
+            }
+
+        // Afficher l'écran de fin de partie
+        GameOverMenu.SetActive(true);
+
+
     }
 
     public void OnPlayerDeathAnimationCallback()
