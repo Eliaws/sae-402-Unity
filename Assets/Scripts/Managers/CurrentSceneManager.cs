@@ -55,6 +55,12 @@ public class CurrentSceneManager : MonoBehaviour
 #endif
     }
 
+    public void PlayGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+
     public void LoadScene(string sceneName)
     {
         if (SceneManager.GetSceneByName(sceneName).IsValid())
