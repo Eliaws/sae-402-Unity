@@ -12,6 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a660e54c6da546045b6aeefa7ae9bed7, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   maxHealth: 10
-  _currentHealth: 0
+  SpriteLibraryAsset: {fileID: 7108339969198208228, guid: 82246a38c08dd934fbadf7c77fd8a249, type: 3}
+  _currentHealth: 10
+=======
+  maxHealth: 5
+  _currentHealth: 5
+>>>>>>> main
   DeveloperDescription: 

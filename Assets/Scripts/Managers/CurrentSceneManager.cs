@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -59,6 +60,7 @@ public class CurrentSceneManager : MonoBehaviour
         if (SceneManager.GetSceneByName(sceneName).IsValid())
         {
             SceneManager.LoadScene(sceneName);
+            Time.timeScale = 1f;
         }
         else
         {
@@ -71,12 +73,21 @@ public class CurrentSceneManager : MonoBehaviour
         if (SceneManager.GetSceneByBuildIndex(sceneIndex).IsValid())
         {
             SceneManager.LoadScene(sceneIndex);
+            Time.timeScale = 1f;
         }
         else
         {
             Debug.Log("Unknown scene");
         }
     }
+
+    public VectorVariable lastCheckpoint;
+
+    public void ResetCheckpoints()
+    {
+        lastCheckpoint.CurrentValue = Vector2.zero; 
+    }
+
 
     public void RestartLevel()
     {
@@ -86,8 +97,8 @@ public class CurrentSceneManager : MonoBehaviour
 
     public void RestartLastCheckpoint()
     {
-        Debug.Log("RestartLastCheckpoint");
-        RestartLevel();
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         //onRestartLastCheckpoint.Raise();
         //Lister dans un tableau les éléments pris, s'ils ont été pris alors ils sont supprimés et comptabilisés dans le score.
         // Refill life to full
